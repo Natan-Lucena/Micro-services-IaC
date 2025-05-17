@@ -1,0 +1,19 @@
+# Diretórios do Terraform
+.terraform/
+.terraform.lock.hcl
+
+# Planos de execução (gerados com terraform plan -out=)
+*.tfplan
+
+# Variáveis sensíveis (se estiver usando)
+terraform.tfvars
+*.tfvars
+
+# Arquivos de estado (contêm dados sensíveis!)
+terraform.tfstate
+terraform.tfstate.backup
+*.tfstate
+
+# Logs ou arquivos temporários
+crash.log
+*.log
