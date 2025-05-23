@@ -1,0 +1,7 @@
+Mostrar o endereço do Bastion:
+    aws ec2 describe-instances --filters "Name=tag:Name,Values=bastion-host" --query "Reservations[*].Instances[*].PublicIpAddress" --output text
+Mostrar o endereço do Redis:
+    aws elasticache describe-cache-clusters --show-cache-node-info --query "CacheClusters[*].CacheNodes[*].Endpoint.Address" --output text
+Conectar no SSH: 
+    ssh -i <Endereço da chave privada> -L 6379:<endpoint_redis>:6379 ec2-user@<endpoint-bastion>
+
