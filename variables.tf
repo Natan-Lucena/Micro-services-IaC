@@ -37,3 +37,8 @@ variable "num_shards" {
   default = 1
   description = "Number of PostgreSQL shards to create"
 }
+
+variable "public_key_path" {
+  description = "Public key path"
+  type        = string
+}
